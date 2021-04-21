@@ -9,7 +9,7 @@ const AddArgonauteForm = ({ proxy }) => {
 
     const addArgonaute = (data) => {
         const { name } = data;
-        if (window.confirm('Are you sure you wish to add this guy?')) {
+        if (window.confirm('Vous êtes sûr de vouloir engager cet homme?')) {
             axios
                 .post(`${proxy}/add`, {
                     name,
@@ -27,8 +27,8 @@ const AddArgonauteForm = ({ proxy }) => {
         <div className="addArgonauteForm-container">
             <h2>Ajouter un(e) Argonaute</h2>
             <form onSubmit={handleSubmit(addArgonaute)}>
-                <input name="Name" {...register('value_name')} placeholder="Charalampos" />
-                <input type="submit" value="Engagé!" />
+                <input name="Name" {...register('name')} placeholder="Charalampos" />
+                <input type="submit" value="Engager" />
             </form>
         </div>
     );
