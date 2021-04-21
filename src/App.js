@@ -5,7 +5,7 @@ import "./App.css";
 import AddArgonauteForm from './components/addArgonauteForm/AddArgonauteForm';
 import ArgonautesList from "./components/argonautesList/ArgonautesList";
 
-const proxy = "https://jasoncrew-back-node.herokuapp.com/";
+const proxy = "https://jasoncrew-back-node.herokuapp.com";
 
 const App = () => {
   return (

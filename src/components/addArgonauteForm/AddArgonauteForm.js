@@ -11,7 +11,7 @@ const AddArgonauteForm = ({ proxy }) => {
         const { name } = data;
         if (window.confirm('Are you sure you wish to add this guy?')) {
             axios
-                .put(`${proxy}/add`, {
+                .post(`${proxy}/add`, {
                     name,
                 })
                 .then((response) => {
