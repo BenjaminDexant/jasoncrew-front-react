@@ -2,6 +2,7 @@ import React from 'react';
 
 import "./App.css";
 
+import AddArgonauteForm from './components/addArgonauteForm/AddArgonauteForm';
 import ArgonautesList from "./components/argonautesList/ArgonautesList";
 
 const proxy = "https://jasoncrew-back-node.herokuapp.com/";
@@ -18,18 +19,8 @@ const App = () => {
           Les Argonautes
         </h1>
       </header>
-
-      <main>
-        <h2>Ajouter un(e) Argonaute</h2>
-        <form className="new-member-form">
-          <label>Nom de l&apos;Argonaute</label>
-          <input id="name" name="name" type="text" placeholder="Charalampos" />
-          <button type="submit">Envoyer</button>
-        </form>
-
-        <ArgonautesList proxy={proxy} />
-      </main>
-
+      <AddArgonauteForm proxy={proxy} />
+      <ArgonautesList proxy={proxy} />
       <footer>
         <p>Réalisé par Jason en Anthestérion de l'an 515 avant JC</p>
       </footer>
