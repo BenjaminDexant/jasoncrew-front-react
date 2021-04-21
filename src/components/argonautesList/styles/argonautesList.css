@@ -1,5 +1,9 @@
 .argonautesList-container {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: auto;
+    justify-content: space-around;
+    margin-right: 10%;
+    margin-left: 10%;
 }

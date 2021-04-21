@@ -9,9 +9,10 @@ const AddArgonauteForm = ({ proxy }) => {
 
     const addArgonaute = (data) => {
         const { name } = data;
+        console.log(name)
         if (window.confirm('Vous êtes sûr de vouloir engager cet homme?')) {
             axios
-                .post(`${proxy}/add`, {
+                .post(`${proxy}/argonautes/add`, {
                     name,
                 })
                 .then((response) => {

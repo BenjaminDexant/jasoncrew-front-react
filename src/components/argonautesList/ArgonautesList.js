@@ -18,9 +18,9 @@ const ArgonautesList = ({proxy}) => {
     <div className="argonautesList-container">
       {argonautesList.map((data, index) => (
         <Argonaute
-          id={data.id}
+          id={data._id}
           name={data.name}
-          key={data.id}
+          key={data._id}
         />
       ))}
     </div>
