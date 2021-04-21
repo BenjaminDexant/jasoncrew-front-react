@@ -1,0 +1,16 @@
+@media (min-width: 769px) {
+    .argonaute-button {
+      margin-top: 1px;
+      margin-right: 10px;
+      font-size: 1.5vw;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .argonaute-button {
+      margin-top: 1px;
+      margin-right: 10px;
+      font-size: 4vw;
+    }
+  }
+ 

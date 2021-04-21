@@ -1,6 +1,12 @@
+import React from 'react';
+
 import "./App.css";
 
-function App() {
+import ArgonautesList from "./components/argonautesList/ArgonautesList";
+
+const proxy = "https://jasoncrew-back-node.herokuapp.com/";
+
+const App = () => {
   return (
     <div>
       <header>
@@ -21,12 +27,7 @@ function App() {
           <button type="submit">Envoyer</button>
         </form>
 
-        <h2>Membres de l'équipage</h2>
-        <section className="member-list">
-          <div className="member-item">Eleftheria</div>
-          <div className="member-item">Gennadios</div>
-          <div className="member-item">Lysimachos</div>
-        </section>
+        <ArgonautesList proxy={proxy} />
       </main>
 
       <footer>
