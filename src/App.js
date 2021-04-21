@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import axios from 'axios';
 
 import "./App.css";
 
@@ -8,6 +10,16 @@ import ArgonautesList from "./components/argonautesList/ArgonautesList";
 const proxy = "https://jasoncrew-back-node.herokuapp.com";
 
 const App = () => {
+  const [argonautesList, setArgonautesList] = useState([]);
+  const [add, setAdd] = useState(false);
+
+  useEffect(() => {
+    axios
+      .get(`${proxy}/argonautes`)
+      .then((res) => res.data)
+      .then((data) => setArgonautesList(data));
+  }, [add, argonautesList]);
+
   return (
     <div>
       <header>
@@ -19,8 +31,8 @@ const App = () => {
           Les Argonautes
         </h1>
       </header>
-      <AddArgonauteForm proxy={proxy} />
-      <ArgonautesList proxy={proxy} />
+      <AddArgonauteForm proxy={proxy} add={add} setAdd={setAdd} />
+      <ArgonautesList argonautesList={argonautesList} />
       <footer>
         <p>Réalisé par Jason en Anthestérion de l'an 515 avant JC</p>
       </footer>
